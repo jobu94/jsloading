@@ -5,11 +5,7 @@ const logFileText = async (file) => {
   const text = await response.text();
   return text;
 };
-const data = logFileText("http://127.0.0.1:8080/input.txt").then(function (
-  result
-) {
-  return result;
-});
+const data = await logFileText("http://127.0.0.1:8080/input.txt");
 console.log(data);
 
 // const fs = require("fs");
